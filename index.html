@@ -45,7 +45,6 @@
             100% { transform: scale(1); }
         }
 
-        /* KEYFRAME KILAU BARU */
         @keyframes textShine {
             0% { background-position: 0% 50%; }
             50% { background-position: 100% 50%; }
@@ -88,18 +87,15 @@
         nav a { text-decoration: none; color: var(--subtle); font-size: 0.6rem; font-weight: 600; text-transform: uppercase; padding: 10px; border-radius: 20px; transition: 0.4s; }
         nav a.active { color: var(--accent); background: white; box-shadow: 0 2px 10px rgba(0,0,0,0.05); transform: translateY(-2px); }
 
-        /* --- Sections --- */
         section { min-height: 100vh; padding: 120px 25px; position: relative; }
         h2 { font-family: 'Instrument Serif', serif; font-size: 2.8rem; font-style: italic; text-align: center; margin-bottom: 40px; }
         .reveal { opacity: 0; transform: translateY(40px); transition: 1.2s cubic-bezier(0.2, 0.8, 0.2, 1); }
         .reveal.active { opacity: 1; transform: translateY(0); }
 
-        /* --- Hero --- */
         #home { display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; }
         .hero-title { 
             font-family: 'Instrument Serif'; font-size: clamp(3.5rem, 12vw, 6rem); 
             line-height: 0.9; margin-bottom: 20px; font-style: italic;
-            /* EFEK KILAU DIPERLAMBAT 8 DETIK */
             background: linear-gradient(to right, #1a1a1a 20%, #d4a373 40%, #ffffff 50%, #d4a373 60%, #1a1a1a 80%);
             background-size: 200% auto;
             -webkit-background-clip: text;
@@ -117,7 +113,6 @@
         .count-item span:first-child { font-family: 'Space Grotesk'; font-size: 1.2rem; display: block; }
         .count-item span:last-child { font-size: 0.5rem; text-transform: uppercase; opacity: 0.6; }
 
-        /* --- Teacher --- */
         .teacher-card { 
             background: white; border-radius: 30px; padding: 40px 20px; text-align: center; 
             box-shadow: 0 10px 30px rgba(0,0,0,0.03); transition: 0.5s;
@@ -126,7 +121,6 @@
         .teacher-img { width: 120px; height: 120px; border-radius: 50%; object-fit: cover; margin-bottom: 20px; border: 4px solid var(--bg-cream); transition: 0.5s; }
         .teacher-card:hover .teacher-img { transform: scale(1.1) rotate(5deg); }
 
-        /* --- Gallery Overlay (FIXED STICKY) --- */
         #gallery-overlay { 
             position: fixed; inset: 0; background: white; z-index: 3000; 
             display: none; flex-direction: column; overflow-y: auto; 
@@ -147,7 +141,6 @@
         .overlay-grid { display: grid; grid-template-columns: 1fr; gap: 15px; padding: 25px; }
         .overlay-grid img { width: 100%; border-radius: 20px; box-shadow: 0 5px 15px rgba(0,0,0,0.05); animation: fadeIn 0.8s ease-out; }
 
-        /* --- Gallery Folder Cards --- */
         .folder-card { 
             width: 100%; aspect-ratio: 16/9; border-radius: 25px; overflow: hidden; 
             margin-bottom: 20px; position: relative; cursor: pointer; transition: 0.6s cubic-bezier(0.2, 0.8, 0.2, 1); 
@@ -157,11 +150,10 @@
         .folder-card:hover img { transform: scale(1.1); }
         .folder-info { position: absolute; inset: 0; background: linear-gradient(to top, rgba(0,0,0,0.7), transparent); display: flex; flex-direction: column; justify-content: flex-end; padding: 20px; color: white; }
 
-        /* --- Student --- */
         .student-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
         .student-item { 
             background: white; padding: 20px 10px; border-radius: 20px; text-align: center; 
-            border: 1px solid #f0f0f0; transition: 0.4s;
+            border: 1px solid #f0f0f0; transition: 0.4s; cursor: pointer; user-select: none;
         }
         .student-item:hover { transform: translateY(-5px) scale(1.02); box-shadow: 0 10px 20px rgba(0,0,0,0.04); border-color: var(--gold-soft); }
         .avatar-circle { width: 50px; height: 50px; border-radius: 50%; margin: 0 auto 10px; display: flex; align-items: center; justify-content: center; font-size: 1.2rem; transition: 0.3s; }
@@ -169,7 +161,6 @@
         .avatar-l { background: #e3f2fd; color: #1976d2; }
         .avatar-p { background: #fce4ec; color: #c2185b; }
 
-        /* --- GAME: LOGO PUZZLE (CSS UPDATE) --- */
         .game-viewport { width: 100%; min-height: 500px; background: var(--bg-cream); border-radius: 35px; display: flex; flex-direction: column; align-items: center; justify-content: center; position: relative; overflow: hidden; }
         .puzzle-grid { display: grid; grid-template-columns: repeat(3, 80px); grid-template-rows: repeat(3, 80px); gap: 8px; }
         .tile { 
@@ -180,7 +171,6 @@
         .game-status { margin-top: 30px; font-family: 'Space Grotesk'; font-size: 0.6rem; letter-spacing: 2px; color: var(--gold-soft); opacity: 0; transition: 0.5s; }
         .game-status.win { opacity: 1; transform: translateY(0); color: #2ecc71; font-weight: bold; }
 
-        /* --- Music Control --- */
         .music-player { 
             position: fixed; top: 25px; right: 25px; z-index: 1001; background: rgba(255,255,255,0.8); 
             padding: 10px 15px; border-radius: 20px; display: flex; align-items: center; gap: 10px; 
@@ -192,7 +182,6 @@
         .playing .bar { animation: bounce 0.8s infinite ease-in-out; }
         @keyframes bounce { 0%, 100% { height: 5px; } 50% { height: 15px; } }
 
-        /* --- AI Robot RPL 2 --- */
         .chat-bot-toggle {
             position: fixed; bottom: 95px; right: 25px; z-index: 1001;
             width: 60px; height: 60px; background: white; border-radius: 50%;
@@ -307,6 +296,7 @@
     <footer style="padding: 60px 20px 150px; text-align: center; opacity: 0.4;">
         <p style="font-family: 'Instrument Serif'; font-style: italic; font-size: 1.5rem;">SE-Two.id</p>
         <p style="font-size: 0.5rem; letter-spacing: 3px; margin-top: 10px; text-transform: uppercase;">SMK NEGERI 5 PDG &bull; XII RPL 2 &bull; 2026</p>
+        <p style="font-size: 0.45rem; letter-spacing: 4px; margin-top: 25px; opacity: 0.8; font-weight: 500; text-transform: uppercase;">CRAFTED BY <span style="font-weight: 600; color: var(--accent);">Mudi Priatno</span></p>
     </footer>
 
     <div id="gallery-overlay">
@@ -330,196 +320,27 @@
     </div>
 
     <script>
-        const botBrain = {
-            "halo": "Halo! Saya asisten virtual RPL 2. Ada yang bisa saya bantu?",
-            "siapa kamu": "Saya Robot RPL 2, AI yang menjaga memori Eternal Symphony ini.",
-            "ketua kelas": "Ketua kelas kami adalah M Dinta Maulana.",
-            "wakil ketua": "Wakil ketua kami adalah Muhamad Wildan.",
-            "wali kelas": "Wali kelas XII RPL 2 adalah Ibu Dede Corlina, S.Kom.",
-            "bendahara": "Bendahara kami adalah Siti Nur Azizah.",
-            "sekretaris": "Sekretaris kami adalah Sartumi.",
-            "jumlah siswa": "Kami beranggotakan 29 siswa yang solid!",
-            "motto": "Motto kami: 'Logic meets Heart'. Mengoding dengan logika, berteman dengan hati.",
-            "rpl 2": "RPL 2 adalah kelas di mana teknologi dan kekeluargaan menyatu menjadi simfoni.",
-            "coding": "Coding adalah seni mengubah kopi menjadi baris kode yang berguna!"
-        };
+        // --- SISTEM AUDIO PIANO DISAMAKAN DENGAN VOLUME MUSIK ---
+        let audioCtx;
+        const pianoNotes = [523.25, 587.33, 659.25, 698.46, 783.99, 880.00]; 
 
-        const students = [
-            { name: "M Dinta Maulana", role: "Ketua Kelas", gender: "L" },
-            { name: "Muhamad Wildan", role: "Wakil Ketua", gender: "L" },
-            { name: "Siti Nur Azizah", role: "Bendahara", gender: "P" },
-            { name: "Sartumi", role: "Sekretaris", gender: "P" },
-            { name: "Lisda Renjani", role: "Siswa", gender: "P" },
-            { name: "Mudi Priatno", role: "Siswa", gender: "L" },
-            { name: "Muhamad Ripiansyah", role: "Siswa", gender: "L" },
-            { name: "Muhamad Ahyudin", role: "Siswa", gender: "L" },
-            { name: "Muhamad Yusuf", role: "Siswa", gender: "L" },
-            { name: "Nisa Aprilia", role: "Siswa", gender: "P" },
-            { name: "Nurfadilah", role: "Siswa", gender: "P" },
-            { name: "Putri Rahmawati", role: "Siswa", gender: "P" },
-            { name: "Rahmat Aditia", role: "Siswa", gender: "L" },
-            { name: "Ratisah", role: "Siswa", gender: "P" },
-            { name: "Resti", role: "Siswa", gender: "P" },
-            { name: "Riska", role: "Siswa", gender: "P" },
-            { name: "Sarjaya", role: "Siswa", gender: "L" },
-            { name: "Silpia", role: "Siswa", gender: "P" },
-            { name: "Siti Diana", role: "Siswa", gender: "P" },
-            { name: "Siti Humairoh", role: "Siswa", gender: "P" },
-            { name: "Siti Indah", role: "Siswa", gender: "P" },
-            { name: "Siti Junaeni", role: "Siswa", gender: "P" },
-            { name: "Siti Ria", role: "Siswa", gender: "P" },
-            { name: "Sri Leni", role: "Siswa", gender: "P" },
-            { name: "Sri Mega Sincu", role: "Siswa", gender: "P" },
-            { name: "Viola Virginia", role: "Siswa", gender: "P" },
-            { name: "Wati Febriani", role: "Siswa", gender: "P" },
-            { name: "Wilda", role: "Siswa", gender: "P" },
-            { name: "Wita Widayanti", role: "Siswa", gender: "P" }
-        ];
+        function playNote() {
+            if (!audioCtx) audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+            if (audioCtx.state === 'suspended') audioCtx.resume();
 
-        const galleryData = {
-            kelas10: { title: "X RPL 2 Memories", count: 20, prefix: "foto10_" },
-            kelas11: { title: "XI RPL 2 Memories", count: 20, prefix: "foto11_" },
-            kelas12: { title: "XII RPL 2 Memories", count: 20, prefix: "foto12_" }
-        };
+            const osc = audioCtx.createOscillator();
+            const gain = audioCtx.createGain();
 
-        // --- GAME PUZZLE LOGIC ---
-        let tiles = [0, 1, 2, 3, 4, 5, 6, 7, 8]; 
+            osc.type = 'triangle'; 
+            const freq = pianoNotes[Math.floor(Math.random() * pianoNotes.length)];
+            osc.frequency.setValueAtTime(freq, audioCtx.currentTime);
 
-        function renderPuzzle() {
-            const grid = document.getElementById('puzzleGrid');
-            grid.innerHTML = '';
-            tiles.forEach((tileIdx, displayIdx) => {
-                const tile = document.createElement('div');
-                tile.className = 'tile';
-                if (tileIdx === 8) {
-                    tile.classList.add('empty');
-                } else {
-                    const row = Math.floor(tileIdx / 3);
-                    const col = tileIdx % 3;
-                    tile.style.backgroundPosition = `-${col * 80}px -${row * 80}px`;
-                    tile.onclick = () => moveTile(displayIdx);
-                }
-                grid.appendChild(tile);
-            });
-        }
+            // VOLUME DISAMAKAN (0.5 atau 50% sama dengan musik latar)
+            gain.gain.setValueAtTime(0.9, audioCtx.currentTime);
+            gain.gain.exponentialRampToValueAtTime(0.0001, audioCtx.currentTime + 0.2);
 
-        function moveTile(idx) {
-            const emptyIdx = tiles.indexOf(8);
-            const validMoves = [idx-1, idx+1, idx-3, idx+3];
-            if (validMoves.includes(emptyIdx)) {
-                const isNotCrossing = !( (idx % 3 === 0 && emptyIdx === idx - 1) || (idx % 3 === 2 && emptyIdx === idx + 1) );
-                if(isNotCrossing) {
-                    [tiles[idx], tiles[emptyIdx]] = [tiles[emptyIdx], tiles[idx]];
-                    renderPuzzle();
-                    checkWin();
-                }
-            }
-        }
+            osc.connect(gain);
+            gain.connect(audioCtx.destination);
 
-        function shufflePuzzle() {
-            for (let i = 0; i < 150; i++) {
-                const emptyIdx = tiles.indexOf(8);
-                const neighbors = [];
-                if (emptyIdx % 3 > 0) neighbors.push(emptyIdx - 1);
-                if (emptyIdx % 3 < 2) neighbors.push(emptyIdx + 1);
-                if (emptyIdx > 2) neighbors.push(emptyIdx - 3);
-                if (emptyIdx < 6) neighbors.push(emptyIdx + 3);
-                const randomNeighbor = neighbors[Math.floor(Math.random() * neighbors.length)];
-                [tiles[emptyIdx], tiles[randomNeighbor]] = [tiles[randomNeighbor], tiles[emptyIdx]];
-            }
-            renderPuzzle();
-        }
-
-        function checkWin() {
-            if (tiles.every((t, i) => t === i)) {
-                document.getElementById('gameStatus').classList.add('win');
-                const emptyTile = document.querySelector('.tile.empty');
-                if(emptyTile) {
-                    emptyTile.style.backgroundImage = "url('logo.png')";
-                    emptyTile.style.backgroundPosition = "-160px -160px";
-                    emptyTile.classList.remove('empty');
-                }
-            }
-        }
-
-        function toggleMusic() {
-            const audio = document.getElementById('mainAudio');
-            const viz = document.getElementById('viz');
-            if(audio.paused) { audio.play(); viz.classList.add('playing'); } 
-            else { audio.pause(); viz.classList.remove('playing'); }
-        }
-
-        function init() {
-            document.getElementById('loader').style.transform = 'translateY(-100%)';
-            document.getElementById('mainAudio').play().catch(() => {});
-            document.getElementById('viz').classList.add('playing');
-            
-            const list = document.getElementById('studentList');
-            list.innerHTML = '';
-            students.forEach(s => {
-                list.innerHTML += `<div class="student-item"><div class="avatar-circle ${s.gender === 'L' ? 'avatar-l' : 'avatar-p'}">${s.gender === 'L' ? '♂' : '♀'}</div><p style="font-weight: 600; font-size: 0.9rem;">${s.name}</p><p style="font-size: 0.65rem; opacity: 0.5;">${s.role}</p></div>`;
-            });
-            shufflePuzzle();
-        }
-
-        function openFolder(key) {
-            const data = galleryData[key];
-            const grid = document.getElementById('overlayGrid');
-            document.getElementById('overlayTitle').innerText = data.title;
-            grid.innerHTML = '';
-            for(let i=1; i<=data.count; i++) {
-                grid.innerHTML += `<img src="${data.prefix}${i}.jpg" loading="lazy">`;
-            }
-            document.getElementById('gallery-overlay').style.display = 'flex';
-        }
-
-        function closeFolder() { document.getElementById('gallery-overlay').style.display = 'none'; }
-        
-        function toggleChat() { 
-            const win = document.getElementById('chatWindow');
-            win.style.display = win.style.display === 'flex' ? 'none' : 'flex';
-        }
-
-        function sendMessage() {
-            const input = document.getElementById('userInput');
-            const msgs = document.getElementById('chatMsgs');
-            if(!input.value.trim()) return;
-            msgs.innerHTML += `<div class="msg user-msg">${input.value}</div>`;
-            const query = input.value.toLowerCase();
-            let reply = "Maaf, robot belum mengerti. Coba tanya 'wali kelas' atau 'ketua kelas'.";
-            for(let key in botBrain) { if(query.includes(key)) { reply = botBrain[key]; break; } }
-            input.value = '';
-            setTimeout(() => { 
-                msgs.innerHTML += `<div class="msg bot-msg">${reply}</div>`;
-                msgs.scrollTop = msgs.scrollHeight;
-            }, 600);
-        }
-
-        const gradDate = new Date("May 15, 2026 00:00:00").getTime();
-        setInterval(() => {
-            const now = new Date().getTime();
-            const d = gradDate - now;
-            document.getElementById('days').innerText = String(Math.floor(d/(1000*60*60*24))).padStart(2, '0');
-            document.getElementById('hours').innerText = String(Math.floor((d%(1000*60*60*24))/(1000*60*60))).padStart(2, '0');
-            document.getElementById('mins').innerText = String(Math.floor((d%(1000*60*60))/(1000*60))).padStart(2, '0');
-            document.getElementById('secs').innerText = String(Math.floor((d%(1000*60))/1000)).padStart(2, '0');
-        }, 1000);
-
-        window.onscroll = () => {
-            document.querySelectorAll('.reveal').forEach(el => {
-                if (el.getBoundingClientRect().top < window.innerHeight - 50) el.classList.add('active');
-            });
-            const scrollPos = window.scrollY;
-            document.querySelectorAll('section').forEach(section => {
-                if (scrollPos >= section.offsetTop - 200 && scrollPos < section.offsetTop + section.offsetHeight - 200) {
-                    const id = section.getAttribute('id');
-                    document.querySelectorAll('nav a').forEach(a => {
-                        a.classList.remove('active');
-                        if (a.getAttribute('href') === `#${id}`) a.classList.add('active');
-                    });
-                }
-            });
-        }
-    </script>
-</body>
-</html>
+            osc.start();
+            osc.stop(audioCtx.curre
